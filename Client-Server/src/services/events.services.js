@@ -3,7 +3,7 @@ import axios from 'axios';
 export class eventService {
   async getEvents() {
     try {
-      const response = await axios.post(`https://gradwise-4xzo.onrender.com/events/hackathons`, {
+      const response = await axios.post(`http://13.234.29.211:3000/events/hackathons`, {
         withCredentials: true
       });
 
