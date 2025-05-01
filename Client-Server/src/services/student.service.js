@@ -9,7 +9,7 @@ export class StudentService{
             console.log(import.meta)
             
             // console.log(data);  
-            const response = await axios.post(`https://gradwise-4xzo.onrender.com/student/register-Student`, data );  
+            const response = await axios.post(`http://13.234.29.211:3000/student/register-Student`, data );  
             console.log(response)
             await this.login(data)
             return response;
@@ -21,7 +21,7 @@ export class StudentService{
     async login(data){
         
         try {
-            const response = await axios.post(`https://gradwise-4xzo.onrender.com/student/login-Student`, data ,{ withCredentials: true }); 
+            const response = await axios.post(`http://13.234.29.211:3000/student/login-Student`, data ,{ withCredentials: true }); 
             console.log(response)                     
             return response;
         } catch (error) {
@@ -31,7 +31,7 @@ export class StudentService{
 
     async logout(){
         try {
-            const response = await axios.post(`https://gradwise-4xzo.onrender.com/student/logout-Student`,{},{ withCredentials: true });
+            const response = await axios.post(`http://13.234.29.211:3000/student/logout-Student`,{},{ withCredentials: true });
             if(response){
                 return response;
             }
@@ -41,7 +41,7 @@ export class StudentService{
     }
     async AiData(data){
         try {
-            const response = await axios.post(`https://gradwise-4xzo.onrender.comai/api/test/`,data,{ withCredentials: true });
+            const response = await axios.post(`http://13.234.29.211:3000/api/test/`,data,{ withCredentials: true });
             if(response){
                 return response;
             }
